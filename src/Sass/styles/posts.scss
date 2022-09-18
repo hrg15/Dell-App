@@ -1,0 +1,34 @@
+@use "../variables";
+
+.posts {
+  position: relative;
+  width: 59%;
+  border-radius: 30px;
+  height: 260px;
+  overflow: hidden;
+  h1 {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: whitesmoke;
+    background: rgba(44, 44, 44, 0.7);
+    padding: 10px 20px;
+    text-shadow: 0 1px 4px rgba(8, 8, 8, 0.3);
+    font-size: 2.5rem;
+  }
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: variables.$xl) {
+  .posts {
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: variables.$sm) {
+  .posts {
+    width: 80%;
+  }
+}

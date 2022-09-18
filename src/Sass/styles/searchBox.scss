@@ -1,0 +1,28 @@
+@use "../variables";
+
+.search-box {
+  input {
+    font-family: "Mali", cursive;
+    border: none;
+    outline: none;
+    padding: 5px 0px;
+    font-size: 1rem;
+    width: 80%;
+  }
+  button {
+    background: none;
+    outline: none;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+//responsive
+
+@media (max-width: variables.$sm) {
+  .search-box {
+    width: 90%;
+  }
+}

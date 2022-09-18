@@ -1,0 +1,27 @@
+.modal {
+  z-index: 200;
+  border-radius: 25px;
+  width: 50%;
+  min-height: 30%;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  h2 {
+    margin: 10px 20px;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+  }
+
+  .modal-text {
+    padding: 5px 20px;
+  }
+}
+.modal-backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}

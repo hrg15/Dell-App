@@ -1,0 +1,157 @@
+@use "../variables";
+
+.left-menu {
+  z-index: 100;
+  background: variables.$main-color;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100vh;
+  border-radius: 0 0 260px 0;
+  transition: all ease-in 0.5s;
+  .menu {
+    text-align: center;
+    margin-top: 60px;
+    ul {
+      list-style: none;
+      margin: auto;
+      width: 65%;
+      li {
+        cursor: pointer;
+        position: relative;
+        padding: 15px;
+        margin: 30px 0;
+        background: #fff;
+        border-radius: 50px;
+        span {
+          background: #fff;
+        }
+      }
+      .user {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin: 40px auto 0;
+        span {
+          bottom: -20px;
+          left: auto;
+          top: auto;
+          padding: 0;
+          width: auto;
+          height: auto;
+          background: none;
+        }
+      }
+    }
+  }
+  .social {
+    margin: 60px 10px;
+    list-style: none;
+    ul {
+      list-style: none;
+      li {
+        margin: 10px 0;
+        a {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+.burger-menu {
+  display: none;
+  margin: 60px 0 0 40px;
+  padding: 5px;
+  button {
+    background: none;
+  }
+}
+
+.backdrop {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+// responsiv
+
+@media (min-width: variables.$lg) {
+  .left-menu {
+    ul li span {
+      position: absolute;
+      left: -20px;
+      top: -5px;
+      background: #fff;
+      padding: 17px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+    }
+    .social {
+      margin: 90px 10px;
+    }
+  }
+}
+
+@media (max-width: variables.$md) {
+  .left-menu {
+    width: 30%;
+    .menu {
+      ul {
+        width: 75%;
+        li {
+          padding: 5px;
+          margin: 15px 0;
+          background: #fff;
+          border-radius: 50px;
+          overflow: hidden;
+          text-align: left;
+        }
+        .user {
+          width: auto;
+          height: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50px;
+          font-size: 1rem;
+          margin: 10px auto 0;
+        }
+      }
+    }
+    .social {
+      margin-top: 30px;
+      ul {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .sidebar-hidden {
+    left: -80%;
+  }
+  .burger-menu {
+    display: inline-block;
+  }
+}
+@media (max-width: variables.$sm) {
+  .left-menu {
+    width: 60%;
+  }
+  .burger-menu {
+    margin: 35px 0 0 30px;
+    button {
+      font-size: 0.7rem;
+    }
+  }
+}
