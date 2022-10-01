@@ -1,0 +1,32 @@
+@use "../variables";
+.user-page {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  float: right;
+  width: 70%;
+  text-align: center;
+  list-style: none;
+  button {
+    background: none;
+    padding: 10px;
+    border: 1px solid variables.$main-color;
+    border-radius: 10px;
+    margin: 10px 5px;
+    &:hover {
+      background: variables.$main-color;
+      cursor: pointer;
+    }
+  }
+  .user-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e0e0e0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+}

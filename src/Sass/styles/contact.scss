@@ -1,0 +1,41 @@
+@use "../variables";
+.contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  float: right;
+  width: 70%;
+  flex-direction: column;
+  list-style: none;
+  form {
+    display: flex;
+    flex-direction: column;
+    input,
+    textarea {
+      padding: 10px;
+      border: 1px solid variables.$main-color;
+      margin: 5px;
+      border-radius: 10px;
+      outline: none;
+    }
+    button {
+      border: 1px solid #000;
+      border-radius: 10px;
+      background: none;
+      width: 50%;
+      padding: 10px;
+      margin: 10px auto;
+      &:hover {
+        cursor: pointer;
+        border: 1px solid variables.$main-color;
+      }
+    }
+  }
+}
+
+@media (max-width: variables.$md) {
+  .contact {
+    width: 100%;
+  }
+}

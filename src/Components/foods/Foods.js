@@ -12,6 +12,7 @@ const Foods = () => {
           name={food.name}
           price={food.price}
           img={food.img}
+          id={food.id}
         />
       ))}
       <Posts />

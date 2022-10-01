@@ -1,0 +1,16 @@
+@use "../variables";
+.all-foods {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  float: right;
+  width: 70%;
+  list-style: none;
+}
+
+@media (max-width: variables.$md) {
+  .all-foods {
+    width: 100%;
+  }
+}

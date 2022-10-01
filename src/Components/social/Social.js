@@ -1,6 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
-import { faWhatsapp, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import {
+  faWhatsapp,
+  faInstagram,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 const Social = (props) => {
   return (
     <ul>
@@ -17,6 +21,11 @@ const Social = (props) => {
       <li>
         <a href="/whatsup">
           <FontAwesomeIcon icon={faWhatsapp} size="xl" />
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/hrg15">
+          <FontAwesomeIcon icon={faGithub} size="xl" />
         </a>
       </li>
     </ul>

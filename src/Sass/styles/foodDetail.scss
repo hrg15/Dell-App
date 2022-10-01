@@ -1,0 +1,55 @@
+@use "../variables";
+.food-detail {
+  display: flex;
+  justify-content: space-around;
+  // align-items: center;
+  float: right;
+  width: 70%;
+  list-style: none;
+  .info {
+    padding: 15px;
+    .add-food {
+      margin-top: 20px;
+    }
+    button {
+      background: variables.$main-color;
+      color: #fff;
+      padding: 5px;
+      margin: 5px;
+      cursor: pointer;
+    }
+    input {
+      border: 1px solid variables.$main-color;
+      padding: 5px;
+      border-radius: 10px;
+    }
+  }
+  .detail-img {
+    width: 350px;
+    border-radius: 10%;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: variables.$md) {
+  .food-detail {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    .info {
+      width: 50%;
+    }
+    .add-food {
+      button {
+        font-size: 1.5rem;
+      }
+      input {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
